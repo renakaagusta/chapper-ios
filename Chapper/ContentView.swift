@@ -37,7 +37,10 @@ struct ContentView: View {
         gameView.viewController.load(gameObjects: _gameObjects, player: _player, terrain: _terrain, touchedRings: 0, missedRings: 0, state: GameState.initialized)
         
         return ZStack {
-            gameView
+            gameView()
+            
+            VStack
+            
         }
     }
 }
