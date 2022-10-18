@@ -431,9 +431,9 @@ class GameLevel: SCNScene, SCNPhysicsContactDelegate {
         addLights()
         
         addTerrain()
-//        addRings()
-//        addHandicaps()
-//        addEnemies()
+        addRings()
+        addHandicaps()
+        addEnemies()
         addPlayer()
         
         self.state = .ready

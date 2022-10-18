@@ -234,10 +234,10 @@ class Player : Plane {
         let oldDirection = self.leftRightDirection
 
         super.moveLeft()
-
-        if oldDirection != self.leftRightDirection {
-            adjustCamera()
-        }
+//
+//        if oldDirection != self.leftRightDirection {
+//            adjustCamera()
+//        }
     }
     
     // -------------------------------------------------------------------------

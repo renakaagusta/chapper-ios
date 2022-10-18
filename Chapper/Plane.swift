@@ -253,6 +253,16 @@ class Plane : GameObject {
         }
     }
     
+    func rotateLeft() {
+        let rotateLeft = SCNAction.rotate(by: CGFloat(GLKMathDegreesToRadians(10)), around: SCNVector3(x: 1, y: 0, z: 0), duration: 0.1)
+        self.runAction(rotateLeft)
+    }
+    
+    func rotateRight() {
+        let rotateRight = SCNAction.rotate(by: CGFloat(GLKMathDegreesToRadians(10)), around: SCNVector3(x: 1, y: 0, z: 0), duration: 0.1)
+        self.runAction(rotateRight)
+    }
+    
     // -------------------------------------------------------------------------
     
     func stopMovingLeftRight() {
