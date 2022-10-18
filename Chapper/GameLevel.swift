@@ -50,6 +50,17 @@ class GameLevel: SCNScene, SCNPhysicsContactDelegate {
 
     // -------------------------------------------------------------------------
     
+    init(gameObjects: Array<GameObject>, player: Player?, terrain: RBTerrain, touchedRings: Int, missedRings: Int, state: GameState) {
+        _gameObjects = gameObjects
+        _player = player
+        _terrain = terrain
+        _touchedRings = touchedRings
+        _missedRings = missedRings
+        _state = state
+        super.init()
+        
+    }
+    
     var state: GameState {
         get {
             return _state
@@ -346,9 +357,9 @@ class GameLevel: SCNScene, SCNPhysicsContactDelegate {
     // -------------------------------------------------------------------------
 
     private func addPlayer() {
-        _player = Player()
-        
-        _player!.position = SCNVector3(Game.Level.width/2, CGFloat(Game.Plane.minimumHeight), Game.Level.start)
+//        _player = Player()
+//
+//        _player!.position = SCNVector3(Game.Level.width/2, CGFloat(Game.Plane.minimumHeight), Game.Level.start)
         self.rootNode.addChildNode(_player!)
         
         _gameObjects.append(_player!)
@@ -357,14 +368,13 @@ class GameLevel: SCNScene, SCNPhysicsContactDelegate {
     // -------------------------------------------------------------------------
     
     private func addTerrain() {
-        // Create terrain
-        _terrain = RBTerrain(width: Int(Game.Level.width), length: Int(Game.Level.length), scale: 96)
-        
+//        _terrain = RBTerrain(width: Int(Game.Level.width), length: Int(Game.Level.length), scale: 96)
+
         let generator = RBPerlinNoiseGenerator(seed: nil)
         _terrain?.formula = {(x: Int32, y: Int32) in
             return generator.valueFor(x: x, y: y)
         }
-        
+
         _terrain!.create(withColor: UIColor.green)
         _terrain!.position = SCNVector3Make(0, 0, 0)
         self.rootNode.addChildNode(_terrain!)
@@ -421,9 +431,9 @@ class GameLevel: SCNScene, SCNPhysicsContactDelegate {
         addLights()
         
         addTerrain()
-        addRings()
-        addHandicaps()
-        addEnemies()
+//        addRings()
+//        addHandicaps()
+//        addEnemies()
         addPlayer()
         
         self.state = .ready

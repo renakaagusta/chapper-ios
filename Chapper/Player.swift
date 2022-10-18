@@ -190,11 +190,11 @@ class Player : Plane {
         if _crashed {
             return
         }
-        
+
         let oldDirection = self.upDownDirection
-        
+
         super.moveUp()
-        
+
         if oldDirection != self.upDownDirection {
             adjustCamera()
         }
@@ -204,7 +204,7 @@ class Player : Plane {
     
     override func moveDown() {
         let oldDirection = self.upDownDirection
-        
+
         super.moveDown()
 
         if oldDirection != self.upDownDirection {
@@ -232,7 +232,7 @@ class Player : Plane {
     
     override func moveLeft() {
         let oldDirection = self.leftRightDirection
-        
+
         super.moveLeft()
 
         if oldDirection != self.leftRightDirection {
@@ -244,9 +244,9 @@ class Player : Plane {
     
     override func moveRight() {
         let oldDirection = self.leftRightDirection
-        
+
         super.moveRight()
-        
+
         if oldDirection != self.leftRightDirection {
             adjustCamera()
         }

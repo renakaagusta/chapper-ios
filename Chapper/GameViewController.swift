@@ -23,7 +23,15 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
     private var _motionManager = CMMotionManager()
     private var _startAttitude: CMAttitude?             // Start attitude
     private var _currentAttitude: CMAttitude?           // Current attitude
-
+    
+    private var _gameObjects = Array<GameObject>()
+    private var _bullets = Array<Bullet>()
+    private var _terrain: RBTerrain?
+    private var _player: Player?
+    private var _touchedRings = 0
+    private var _missedRings = 0
+    private var _state = GameState.initialized
+    
     // -------------------------------------------------------------------------
     // MARK: - Properties
 
@@ -168,7 +176,25 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _level = GameLevel()
+       
+    }
+    
+    public func load(gameObjects: Array<GameObject>, player: Player?, terrain: RBTerrain, touchedRings: Int, missedRings: Int, state: GameState) {
+        _gameObjects = gameObjects
+        _player = player
+        _terrain = terrain
+        _touchedRings = touchedRings
+        _missedRings = missedRings
+        _state = state
+        
+        print("----player")
+        print(player)
+        
+        print("----terrain")
+        print(terrain)
+        
+        _level = GameLevel(gameObjects: _gameObjects, player: _player, terrain: _terrain!, touchedRings: _touchedRings, missedRings: _missedRings, state: _state)
+        
         _level.create()
         
         _sceneView = SCNView()
@@ -213,9 +239,9 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 }
 
 struct GameView: UIViewControllerRepresentable {
+    let viewController = GameViewController()
+    
     func makeUIViewController(context: Context) -> GameViewController {
-        let viewController = GameViewController()
-        
         return viewController
     }
     func updateUIViewController(_ uiViewController: GameViewController, context: Context) {
