@@ -51,7 +51,7 @@ struct ContentView: View {
                 .foregroundColor(Color.bg.third)
             
             Text("hello sayang versi rubik")
-                .font(.rubik(.regular, size: .title))
+                .font(.rubik(.regular, size: .title1))
                 .foregroundColor(Color.bg.primary)
             
 //            gameView
