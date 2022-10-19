@@ -48,10 +48,11 @@ struct ContentView: View {
             
             Text("hello sayang versi jose")
                 .font(.josefinSans(.regular, size: .regular))
-                .foregroundColor(Color.bg.secondary)
+                .foregroundColor(Color.bg.third)
             
             Text("hello sayang versi rubik")
                 .font(.rubik(.regular, size: .title))
+                .foregroundColor(Color.bg.primary)
             
 //            gameView
 //            VStack{

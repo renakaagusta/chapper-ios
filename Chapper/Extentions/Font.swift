@@ -19,17 +19,18 @@ import SwiftUI
 
 //Dynamic Type Font
 enum fontType: CGFloat {
-    case title = 28.0
+    case title1 = 28.0
     case title2 = 22.0
     case title3 = 20.0
-    case headline = 17.0
+    case headline = 17.5
     case subheadline = 15.0
     case regular = 18.0
-    case body = 16.5
+    case body = 17.0
     case callout = 16.0
     case footnote = 13.0
-    case caption = 12.0
+    case caption1 = 12.0
     case caption2 = 11.0
+    case largeTitle = 34.0
 }
 
 //josefinSans Font
