@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F3FEB6A28FFABD2003DB990 /* Ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6928FFABD2003DB990 /* Ship.scn */; };
 		2FEB91C928FD609000108A56 /* ChapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91C828FD609000108A56 /* ChapperApp.swift */; };
 		2FEB91CB28FD609000108A56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91CA28FD609000108A56 /* ContentView.swift */; };
 		2FEB91CD28FD609200108A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FEB91CC28FD609200108A56 /* Assets.xcassets */; };
 		2FEB91D028FD609200108A56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FEB91CF28FD609200108A56 /* Preview Assets.xcassets */; };
-		2FEB91D928FD60A700108A56 /* projet.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 2FEB91D628FD60A700108A56 /* projet.usdc */; };
+		2FEB91D928FD60A700108A56 /* Project.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 2FEB91D628FD60A700108A56 /* Project.usdc */; };
 		2FEB91DA28FD60A700108A56 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91D728FD60A700108A56 /* GameViewController.swift */; };
 		2FEB91DB28FD60A700108A56 /* SmallTree.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2FEB91D828FD60A700108A56 /* SmallTree.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F3FEB6928FFABD2003DB990 /* Ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Ship.scn; sourceTree = "<group>"; };
 		2FEB91C528FD609000108A56 /* Chapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FEB91C828FD609000108A56 /* ChapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapperApp.swift; sourceTree = "<group>"; };
 		2FEB91CA28FD609000108A56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FEB91CC28FD609200108A56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FEB91CF28FD609200108A56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2FEB91D628FD60A700108A56 /* projet.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = projet.usdc; sourceTree = "<group>"; };
+		2FEB91D628FD60A700108A56 /* Project.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Project.usdc; sourceTree = "<group>"; };
 		2FEB91D728FD60A700108A56 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2FEB91D828FD60A700108A56 /* SmallTree.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = SmallTree.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				2FEB91D728FD60A700108A56 /* GameViewController.swift */,
-				2FEB91D628FD60A700108A56 /* projet.usdc */,
+				2FEB91D628FD60A700108A56 /* Project.usdc */,
+				2F3FEB6928FFABD2003DB990 /* Ship.scn */,
 				2FEB91D828FD60A700108A56 /* SmallTree.usdz */,
 				2FEB91C828FD609000108A56 /* ChapperApp.swift */,
 				2FEB91CA28FD609000108A56 /* ContentView.swift */,
@@ -111,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "Chapper" */;
+			buildConfigurationList = 2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "chapper" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,8 +137,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3FEB6A28FFABD2003DB990 /* Ship.scn in Resources */,
 				2FEB91D028FD609200108A56 /* Preview Assets.xcassets in Resources */,
-				2FEB91D928FD60A700108A56 /* projet.usdc in Resources */,
+				2FEB91D928FD60A700108A56 /* Project.usdc in Resources */,
 				2FEB91CD28FD609200108A56 /* Assets.xcassets in Resources */,
 				2FEB91DB28FD60A700108A56 /* SmallTree.usdz in Resources */,
 			);
@@ -332,7 +336,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "Chapper" */ = {
+		2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "chapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FEB91D128FD609200108A56 /* Debug */,
