@@ -42,6 +42,9 @@
 		2F3FEB6428FE84CF003DB990 /* Body1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB3228FE84CF003DB990 /* Body1.swift */; };
 		2F3FEB6528FE84CF003DB990 /* Caption1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB3328FE84CF003DB990 /* Caption1.swift */; };
 		2F3FEB6628FE84CF003DB990 /* Title1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB3428FE84CF003DB990 /* Title1.swift */; };
+		2F3FEB6E28FFE780003DB990 /* Project.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6B28FFE77F003DB990 /* Project.usdc */; };
+		2F3FEB6F28FFE780003DB990 /* SmallTree.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6C28FFE77F003DB990 /* SmallTree.usdz */; };
+		2F3FEB7028FFE780003DB990 /* Ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6D28FFE77F003DB990 /* Ship.scn */; };
 		2FEB91C928FD609000108A56 /* ChapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91C828FD609000108A56 /* ChapperApp.swift */; };
 		2FEB91CB28FD609000108A56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91CA28FD609000108A56 /* ContentView.swift */; };
 		2FEB91CD28FD609200108A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FEB91CC28FD609200108A56 /* Assets.xcassets */; };
@@ -108,6 +111,9 @@
 		2F3FEB3228FE84CF003DB990 /* Body1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Body1.swift; sourceTree = "<group>"; };
 		2F3FEB3328FE84CF003DB990 /* Caption1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Caption1.swift; sourceTree = "<group>"; };
 		2F3FEB3428FE84CF003DB990 /* Title1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title1.swift; sourceTree = "<group>"; };
+		2F3FEB6B28FFE77F003DB990 /* Project.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Project.usdc; sourceTree = "<group>"; };
+		2F3FEB6C28FFE77F003DB990 /* SmallTree.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = SmallTree.usdz; sourceTree = "<group>"; };
+		2F3FEB6D28FFE77F003DB990 /* Ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Ship.scn; sourceTree = "<group>"; };
 		2FEB91C528FD609000108A56 /* Chapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FEB91C828FD609000108A56 /* ChapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapperApp.swift; sourceTree = "<group>"; };
 		2FEB91CA28FD609000108A56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -364,6 +370,9 @@
 				2FEB91E328FD672C00108A56 /* GameSound.swift */,
 				2FEB91E128FD672C00108A56 /* Player.swift */,
 				2FEB91DE28FD671B00108A56 /* GameLevel.swift */,
+				2F3FEB6B28FFE77F003DB990 /* Project.usdc */,
+				2F3FEB6D28FFE77F003DB990 /* Ship.scn */,
+				2F3FEB6C28FFE77F003DB990 /* SmallTree.usdz */,
 				2FEB91C828FD609000108A56 /* ChapperApp.swift */,
 				2FEB91CA28FD609000108A56 /* ContentView.swift */,
 				2FEB91CC28FD609200108A56 /* Assets.xcassets */,
@@ -457,7 +466,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "Chapper" */;
+			buildConfigurationList = 2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "chapper" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -484,6 +493,9 @@
 				B809C9CC28FF9D9A00AB555A /* JosefinSans.ttf in Resources */,
 				2FEB91D028FD609200108A56 /* Preview Assets.xcassets in Resources */,
 				2FEB91CD28FD609200108A56 /* Assets.xcassets in Resources */,
+				2F3FEB6E28FFE780003DB990 /* Project.usdc in Resources */,
+				2F3FEB6F28FFE780003DB990 /* SmallTree.usdz in Resources */,
+				2F3FEB7028FFE780003DB990 /* Ship.scn in Resources */,
 				B809C9CE28FFB2F900AB555A /* Rubik.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -736,7 +748,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "Chapper" */ = {
+		2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "chapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FEB91D128FD609200108A56 /* Debug */,
