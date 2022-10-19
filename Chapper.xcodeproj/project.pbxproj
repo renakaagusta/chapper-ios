@@ -45,6 +45,13 @@
 		2F3FEB6E28FFE780003DB990 /* Project.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6B28FFE77F003DB990 /* Project.usdc */; };
 		2F3FEB6F28FFE780003DB990 /* SmallTree.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6C28FFE77F003DB990 /* SmallTree.usdz */; };
 		2F3FEB7028FFE780003DB990 /* Ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6D28FFE77F003DB990 /* Ship.scn */; };
+		2F3FEB7228FFF284003DB990 /* StoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB7128FFF284003DB990 /* StoryListView.swift */; };
+		2F3FEB7828FFF315003DB990 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB7728FFF315003DB990 /* MainMenuView.swift */; };
+		2F3FEB7B28FFF32B003DB990 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB7A28FFF32B003DB990 /* HelpView.swift */; };
+		2F3FEB7E28FFF42A003DB990 /* StorySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB7D28FFF42A003DB990 /* StorySummaryView.swift */; };
+		2F3FEB8128FFF4B0003DB990 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB8028FFF4B0003DB990 /* StoryView.swift */; };
+		2F3FEB8328FFF781003DB990 /* StoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB8228FFF781003DB990 /* StoryData.swift */; };
+		2F3FEB8528FFF8FD003DB990 /* ObjectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB8428FFF8FD003DB990 /* ObjectScene.swift */; };
 		2FEB91C928FD609000108A56 /* ChapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91C828FD609000108A56 /* ChapperApp.swift */; };
 		2FEB91CB28FD609000108A56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91CA28FD609000108A56 /* ContentView.swift */; };
 		2FEB91CD28FD609200108A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FEB91CC28FD609200108A56 /* Assets.xcassets */; };
@@ -114,6 +121,13 @@
 		2F3FEB6B28FFE77F003DB990 /* Project.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Project.usdc; sourceTree = "<group>"; };
 		2F3FEB6C28FFE77F003DB990 /* SmallTree.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = SmallTree.usdz; sourceTree = "<group>"; };
 		2F3FEB6D28FFE77F003DB990 /* Ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Ship.scn; sourceTree = "<group>"; };
+		2F3FEB7128FFF284003DB990 /* StoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListView.swift; sourceTree = "<group>"; };
+		2F3FEB7728FFF315003DB990 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		2F3FEB7A28FFF32B003DB990 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		2F3FEB7D28FFF42A003DB990 /* StorySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySummaryView.swift; sourceTree = "<group>"; };
+		2F3FEB8028FFF4B0003DB990 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		2F3FEB8228FFF781003DB990 /* StoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryData.swift; sourceTree = "<group>"; };
+		2F3FEB8428FFF8FD003DB990 /* ObjectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectScene.swift; sourceTree = "<group>"; };
 		2FEB91C528FD609000108A56 /* Chapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FEB91C828FD609000108A56 /* ChapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapperApp.swift; sourceTree = "<group>"; };
 		2FEB91CA28FD609000108A56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -332,6 +346,77 @@
 			path = Organigram;
 			sourceTree = "<group>";
 		};
+		2F3FEB7328FFF2A7003DB990 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2FEB91E228FD672C00108A56 /* GameObject.swift */,
+				2FEB91E028FD672C00108A56 /* GameSettings.swift */,
+				2FEB91E828FD676600108A56 /* Bullet.swift */,
+				2FEB91EA28FD676600108A56 /* Enemy.swift */,
+				2FEB91EC28FD676700108A56 /* Handicap.swift */,
+				2FEB91E928FD676600108A56 /* Plane.swift */,
+				2FEB91EB28FD676700108A56 /* Ring.swift */,
+				2FEB91E328FD672C00108A56 /* GameSound.swift */,
+				2FEB91E128FD672C00108A56 /* Player.swift */,
+				2FEB91DE28FD671B00108A56 /* GameLevel.swift */,
+				2F3FEB8228FFF781003DB990 /* StoryData.swift */,
+				2F3FEB8428FFF8FD003DB990 /* ObjectScene.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F3FEB7428FFF2C4003DB990 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F3FEB7F28FFF48F003DB990 /* Story */,
+				2F3FEB7C28FFF417003DB990 /* StorySummary */,
+				2F3FEB7928FFF31A003DB990 /* Help */,
+				2F3FEB7628FFF2E9003DB990 /* MainMenu */,
+				2F3FEB7528FFF2D9003DB990 /* StoryList */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F3FEB7528FFF2D9003DB990 /* StoryList */ = {
+			isa = PBXGroup;
+			children = (
+				2F3FEB7128FFF284003DB990 /* StoryListView.swift */,
+			);
+			path = StoryList;
+			sourceTree = "<group>";
+		};
+		2F3FEB7628FFF2E9003DB990 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				2F3FEB7728FFF315003DB990 /* MainMenuView.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		2F3FEB7928FFF31A003DB990 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				2F3FEB7A28FFF32B003DB990 /* HelpView.swift */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		2F3FEB7C28FFF417003DB990 /* StorySummary */ = {
+			isa = PBXGroup;
+			children = (
+				2F3FEB7D28FFF42A003DB990 /* StorySummaryView.swift */,
+			);
+			path = StorySummary;
+			sourceTree = "<group>";
+		};
+		2F3FEB7F28FFF48F003DB990 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				2F3FEB8028FFF4B0003DB990 /* StoryView.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
 		2FEB91BC28FD609000108A56 = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +436,8 @@
 		2FEB91C728FD609000108A56 /* Chapper */ = {
 			isa = PBXGroup;
 			children = (
+				2F3FEB7428FFF2C4003DB990 /* View */,
+				2F3FEB7328FFF2A7003DB990 /* Model */,
 				B809C9C928FF97F800AB555A /* Info.plist */,
 				B809C9B928FF19E100AB555A /* Typography */,
 				B809C9B428FF0C8C00AB555A /* Extentions */,
@@ -359,17 +446,7 @@
 				2F3FEAE928FE84CE003DB990 /* Utils */,
 				2FEB91F228FD67AA00108A56 /* shared */,
 				2FEB91D728FD60A700108A56 /* GameViewController.swift */,
-				2FEB91E228FD672C00108A56 /* GameObject.swift */,
-				2FEB91E028FD672C00108A56 /* GameSettings.swift */,
-				2FEB91E828FD676600108A56 /* Bullet.swift */,
 				2F3FEAE228FE517A003DB990 /* art.scnassets */,
-				2FEB91EA28FD676600108A56 /* Enemy.swift */,
-				2FEB91EC28FD676700108A56 /* Handicap.swift */,
-				2FEB91E928FD676600108A56 /* Plane.swift */,
-				2FEB91EB28FD676700108A56 /* Ring.swift */,
-				2FEB91E328FD672C00108A56 /* GameSound.swift */,
-				2FEB91E128FD672C00108A56 /* Player.swift */,
-				2FEB91DE28FD671B00108A56 /* GameLevel.swift */,
 				2F3FEB6B28FFE77F003DB990 /* Project.usdc */,
 				2F3FEB6D28FFE77F003DB990 /* Ship.scn */,
 				2F3FEB6C28FFE77F003DB990 /* SmallTree.usdz */,
@@ -512,6 +589,7 @@
 				2F3FEB6028FE84CF003DB990 /* Divider.swift in Sources */,
 				2FEB91DF28FD671B00108A56 /* GameLevel.swift in Sources */,
 				2F3FEB3828FE84CF003DB990 /* LiveData.swift in Sources */,
+				2F3FEB8328FFF781003DB990 /* StoryData.swift in Sources */,
 				2FEB920128FD67AA00108A56 /* RB+SKAction.swift in Sources */,
 				2F3FEB3E28FE84CF003DB990 /* String.swift in Sources */,
 				2F3FEB5B28FE84CF003DB990 /* ImageButton.swift in Sources */,
@@ -522,6 +600,7 @@
 				B809C9B628FF0C9A00AB555A /* Color.swift in Sources */,
 				2F3FEB3D28FE84CF003DB990 /* Screen.swift in Sources */,
 				2F3FEB5E28FE84CF003DB990 /* Link.swift in Sources */,
+				2F3FEB8528FFF8FD003DB990 /* ObjectScene.swift in Sources */,
 				2F3FEB6128FE84CF003DB990 /* Headline1.swift in Sources */,
 				2FEB91F028FD676700108A56 /* Ring.swift in Sources */,
 				2F3FEB3A28FE84CF003DB990 /* State.swift in Sources */,
@@ -537,18 +616,22 @@
 				2F3FEB3928FE84CF003DB990 /* Constant.swift in Sources */,
 				2FEB91EF28FD676700108A56 /* Enemy.swift in Sources */,
 				2F3FEB5C28FE84CF003DB990 /* CircleButton.swift in Sources */,
+				2F3FEB7828FFF315003DB990 /* MainMenuView.swift in Sources */,
 				2F3FEB6528FE84CF003DB990 /* Caption1.swift in Sources */,
 				2F3FEB5228FE84CF003DB990 /* NumberField.swift in Sources */,
+				2F3FEB7228FFF284003DB990 /* StoryListView.swift in Sources */,
 				2FEB91E628FD672C00108A56 /* GameObject.swift in Sources */,
 				2F3FEB5F28FE84CF003DB990 /* ElevatedLink.swift in Sources */,
 				2FEB91E428FD672C00108A56 /* GameSettings.swift in Sources */,
 				2FEB91DA28FD60A700108A56 /* GameViewController.swift in Sources */,
 				2FEB91E728FD672C00108A56 /* GameSound.swift in Sources */,
+				2F3FEB7B28FFF32B003DB990 /* HelpView.swift in Sources */,
 				2F3FEB4F28FE84CF003DB990 /* Card.swift in Sources */,
 				2FEB91E528FD672C00108A56 /* Player.swift in Sources */,
 				2F3FEB6328FE84CF003DB990 /* Footnote.swift in Sources */,
 				2F3FEB5728FE84CF003DB990 /* ElevatedButton.swift in Sources */,
 				2FEB91C928FD609000108A56 /* ChapperApp.swift in Sources */,
+				2F3FEB8128FFF4B0003DB990 /* StoryView.swift in Sources */,
 				2FEB920028FD67AA00108A56 /* RBTerrain.swift in Sources */,
 				2FEB920228FD67AA00108A56 /* RBRandom.swift in Sources */,
 				2FEB91FD28FD67AA00108A56 /* RB+CGPoint.swift in Sources */,
@@ -557,6 +640,7 @@
 				2FEB91FE28FD67AA00108A56 /* RB+SCNVector.swift in Sources */,
 				2F3FEB5328FE84CF003DB990 /* AvatarImage.swift in Sources */,
 				2F3FEB3728FE84CF003DB990 /* Binding.swift in Sources */,
+				2F3FEB7E28FFF42A003DB990 /* StorySummaryView.swift in Sources */,
 				2F3FEB5128FE84CF003DB990 /* TextField.swift in Sources */,
 				2F3FEB5428FE84CF003DB990 /* AsyncImage.swift in Sources */,
 				2FEB920628FD67AA00108A56 /* RBPerlinNoiseGenerator.swift in Sources */,
