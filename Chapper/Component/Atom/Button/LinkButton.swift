@@ -12,7 +12,8 @@ struct AppLinkButton: View {
     @State var height: Double = 0.0
     @State var width: Double = 0.0
     @State var color: Color = Color.gray
-    @State var image: AppImage = AppImage(height: 40.0, width: 40.0, url: "arrow.right", source: AppImageSource.SystemName,color: Color.gray, component: {})
+    @State var backgroundColor: Color = Color.green
+    @State var image: AppImage = AppImage(height: 40.0, width: 40.0, url: "arrow.right", source: AppImageSource.SystemName, color: Color.gray, component: {})
     
     var onClick: () -> Void = {}
     
@@ -22,12 +23,16 @@ struct AppLinkButton: View {
         }, label: {
             Text(label).foregroundColor(color).padding()
             image
-        }).frame(minWidth: width < 1 ? 0.0 : width, idealWidth: width < 1 ? .infinity : width, maxWidth: width < 1 ? .infinity :width, minHeight: height < 0  ? 0 : height, idealHeight: (height < 1) ? 12 : height,  maxHeight: (height < 1) ? 12 : height).padding().background(Color.white)
+        })
+        .frame(minWidth: width < 1 ? 0.0 : width, idealWidth: width < 1 ? .infinity : width, maxWidth: width < 1 ? .infinity :width, minHeight: height < 0  ? 0 : height, idealHeight: (height < 1) ? 12 : height,  maxHeight: (height < 1) ? 12 : height)
+        .padding()
+        .background(Color.white)
     }
 }
 
 struct AppLinkButton_Previews: PreviewProvider {
     static var previews: some View {
         AppLinkButton(label: "Button")
+            .previewLayout(.sizeThatFits)
     }
 }

@@ -18,8 +18,8 @@ struct AppCircleButton: View {
     @State var icon: Image?
     @State var image: Image?
     @State var text: String?
-    @State var color: Color? = Color.white
-    @State var backgroundColor: Color? = Color.primaryColor
+    @State var color: Color? = Color.black
+    @State var backgroundColor: Color? = Color.green
     @State var source: AppCircleButtonContentSource = AppCircleButtonContentSource.Image
     
     var onClick: () -> Void = {}
@@ -39,5 +39,6 @@ struct AppCircleButton: View {
 struct AppCircleButton_Previews: PreviewProvider {
     static var previews: some View {
         AppCircleButton()
+            .previewLayout(.sizeThatFits)
     }
 }

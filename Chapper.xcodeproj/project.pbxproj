@@ -66,6 +66,10 @@
 		2FEB920328FD67AA00108A56 /* RB+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91F928FD67AA00108A56 /* RB+UIColor.swift */; };
 		2FEB920528FD67AA00108A56 /* RBLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91FB28FD67AA00108A56 /* RBLog.swift */; };
 		2FEB920628FD67AA00108A56 /* RBPerlinNoiseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91FC28FD67AA00108A56 /* RBPerlinNoiseGenerator.swift */; };
+		B809C9B628FF0C9A00AB555A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B809C9B528FF0C9A00AB555A /* Color.swift */; };
+		B809C9B828FF19A300AB555A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B809C9B728FF19A300AB555A /* Font.swift */; };
+		B809C9CC28FF9D9A00AB555A /* JosefinSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */; };
+		B809C9CE28FFB2F900AB555A /* Rubik.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B809C9CD28FFB2F900AB555A /* Rubik.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +133,11 @@
 		2FEB91F928FD67AA00108A56 /* RB+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RB+UIColor.swift"; sourceTree = "<group>"; };
 		2FEB91FB28FD67AA00108A56 /* RBLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBLog.swift; sourceTree = "<group>"; };
 		2FEB91FC28FD67AA00108A56 /* RBPerlinNoiseGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBPerlinNoiseGenerator.swift; sourceTree = "<group>"; };
+		B809C9B528FF0C9A00AB555A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B809C9B728FF19A300AB555A /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		B809C9C928FF97F800AB555A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JosefinSans.ttf; sourceTree = "<group>"; };
+		B809C9CD28FFB2F900AB555A /* Rubik.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rubik.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +345,9 @@
 		2FEB91C728FD609000108A56 /* Chapper */ = {
 			isa = PBXGroup;
 			children = (
+				B809C9C928FF97F800AB555A /* Info.plist */,
+				B809C9B928FF19E100AB555A /* Typography */,
+				B809C9B428FF0C8C00AB555A /* Extentions */,
 				2F3FEAF128FE84CF003DB990 /* Component */,
 				2F3FEAE528FE84CE003DB990 /* Helpers */,
 				2F3FEAE928FE84CE003DB990 /* Utils */,
@@ -384,6 +396,32 @@
 			path = shared;
 			sourceTree = "<group>";
 		};
+		B809C9B428FF0C8C00AB555A /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				B809C9B528FF0C9A00AB555A /* Color.swift */,
+				B809C9B728FF19A300AB555A /* Font.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		B809C9B928FF19E100AB555A /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				B809C9BA28FF1A0600AB555A /* Josefin sans */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		B809C9BA28FF1A0600AB555A /* Josefin sans */ = {
+			isa = PBXGroup;
+			children = (
+				B809C9CD28FFB2F900AB555A /* Rubik.ttf */,
+				B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */,
+			);
+			path = "Josefin sans";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,7 +457,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "chapper" */;
+			buildConfigurationList = 2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "Chapper" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -443,8 +481,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F3FEAE428FE53BE003DB990 /* art.scnassets in Resources */,
+				B809C9CC28FF9D9A00AB555A /* JosefinSans.ttf in Resources */,
 				2FEB91D028FD609200108A56 /* Preview Assets.xcassets in Resources */,
 				2FEB91CD28FD609200108A56 /* Assets.xcassets in Resources */,
+				B809C9CE28FFB2F900AB555A /* Rubik.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,9 +503,11 @@
 				2FEB920128FD67AA00108A56 /* RB+SKAction.swift in Sources */,
 				2F3FEB3E28FE84CF003DB990 /* String.swift in Sources */,
 				2F3FEB5B28FE84CF003DB990 /* ImageButton.swift in Sources */,
+				B809C9B828FF19A300AB555A /* Font.swift in Sources */,
 				2F3FEB6228FE84CF003DB990 /* Header.swift in Sources */,
 				2F3FEB5D28FE84CF003DB990 /* TextButton.swift in Sources */,
 				2F3FEB3B28FE84CF003DB990 /* Scheme.swift in Sources */,
+				B809C9B628FF0C9A00AB555A /* Color.swift in Sources */,
 				2F3FEB3D28FE84CF003DB990 /* Screen.swift in Sources */,
 				2F3FEB5E28FE84CF003DB990 /* Link.swift in Sources */,
 				2F3FEB6128FE84CF003DB990 /* Headline1.swift in Sources */,
@@ -642,6 +684,7 @@
 				DEVELOPMENT_TEAM = KZ9PN4535G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chapper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -671,6 +714,7 @@
 				DEVELOPMENT_TEAM = KZ9PN4535G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chapper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -692,7 +736,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "chapper" */ = {
+		2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "Chapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FEB91D128FD609200108A56 /* Debug */,

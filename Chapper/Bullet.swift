@@ -42,7 +42,6 @@ class Bullet : GameObject {
             }
         }
     }
-    
     // -------------------------------------------------------------------------
 
     override var description: String {
