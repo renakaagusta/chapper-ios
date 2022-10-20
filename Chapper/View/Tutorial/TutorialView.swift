@@ -19,7 +19,7 @@ struct TutorialView: View {
                 AppProgressBar(width:300, height: 7)
                     .padding()
                 
-                AppRubik(text: "Rotate", rubikSize: fontType.body, fontWeight: .bold , fontColor: Color.text.primary)
+                AppRubik(text: "Hallo selamat datang", rubikSize: fontType.body, fontWeight: .bold , fontColor: Color.text.primary)
                 
                 Spacer()
                 

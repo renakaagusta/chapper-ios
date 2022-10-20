@@ -35,7 +35,8 @@ struct StoryView: View {
         
         self.data = data
         
-        guard let sceneUrl = Bundle.main.url(forResource: data.sceneName, withExtension: "usdc") else { fatalError() }
+        guard let sceneUrl = Bundle.main.url(forResource: data.sceneName, withExtension: "scn") else { fatalError() }
+        
         self.scene = try! SCNScene(url: sceneUrl, options: [.checkConsistency: true])
         
         self.cameraNode = SCNNode()

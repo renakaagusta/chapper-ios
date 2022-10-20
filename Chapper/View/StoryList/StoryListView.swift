@@ -15,7 +15,7 @@ struct StoryListView: View {
             title: "Story 1",
             description: "Description 1",
             thumbnail: "",
-            sceneName: "Project",
+            sceneName: "3DAssetS1",
             objectList: [
                 ObjectScene(
                     title: "Object 1",
@@ -30,7 +30,7 @@ struct StoryListView: View {
             title: "Story 2",
             description: "Description 1",
             thumbnail: "",
-            sceneName: "Project",
+            sceneName: "3DAssetS1",
             objectList: [
                 ObjectScene(
                     title: "Object 1",

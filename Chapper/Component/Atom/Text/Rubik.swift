@@ -15,7 +15,6 @@ struct AppRubik: View {
     var fontWeight: Font.Weight = Font.Weight.medium
     var fontColor: Color = Color.black
     
-
     var body: some View {
         Text(text)
             .font(.rubik(.regular, size: rubikSize))
