@@ -21,6 +21,7 @@ struct AppOutlinedButton: View {
             self.onClick()
         }, label: {
             Text(label).foregroundColor(color).padding()
+                .font(.rubik(.regular, size: .body))
                 .frame(minWidth: width < 1 ? 0.0 : width, idealWidth: width < 1 ? .infinity : width, maxWidth: width < 1 ? .infinity :width, minHeight: height < 0  ? 0 : height, idealHeight: (height < 1) ? 12 : height,  maxHeight: (height < 1) ? 12 : height).padding().background(Color.clear).overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(borderColor!, lineWidth: 2)
