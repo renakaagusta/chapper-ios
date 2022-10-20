@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppProgressBar: View {
     var width: CGFloat = 300
-    var height: CGFloat = 17
+    var height: CGFloat = 7
     
     var body: some View {
         ZStack(alignment: .leading) {
