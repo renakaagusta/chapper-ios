@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct AppProgressBar: View {
+    var width: CGFloat = 300
+    var height: CGFloat = 17
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .leading) {
+            RoundedRectangle(cornerRadius: 17, style: .continuous)
+                .frame(width: width, height: height)
+            .foregroundColor(Color.foot.primary.opacity(0.5))
+            
+            RoundedRectangle(cornerRadius: 17, style: .continuous)
+                .frame(width: width, height: height)
+            .foregroundColor(Color.foot.primary)
+        }
     }
 }
 
