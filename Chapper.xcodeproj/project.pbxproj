@@ -37,11 +37,6 @@
 		2F3FEB5F28FE84CF003DB990 /* ElevatedLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB2B28FE84CF003DB990 /* ElevatedLink.swift */; };
 		2F3FEB6028FE84CF003DB990 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB2D28FE84CF003DB990 /* Divider.swift */; };
 		2F3FEB6128FE84CF003DB990 /* Headline1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB2F28FE84CF003DB990 /* Headline1.swift */; };
-		2F3FEB6228FE84CF003DB990 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB3028FE84CF003DB990 /* Header.swift */; };
-		2F3FEB6328FE84CF003DB990 /* Footnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB3128FE84CF003DB990 /* Footnote.swift */; };
-		2F3FEB6428FE84CF003DB990 /* Body1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB3228FE84CF003DB990 /* Body1.swift */; };
-		2F3FEB6528FE84CF003DB990 /* Caption1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB3328FE84CF003DB990 /* Caption1.swift */; };
-		2F3FEB6628FE84CF003DB990 /* Title1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FEB3428FE84CF003DB990 /* Title1.swift */; };
 		2F3FEB6E28FFE780003DB990 /* Project.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6B28FFE77F003DB990 /* Project.usdc */; };
 		2F3FEB6F28FFE780003DB990 /* SmallTree.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6C28FFE77F003DB990 /* SmallTree.usdz */; };
 		2F3FEB7028FFE780003DB990 /* Ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FEB6D28FFE77F003DB990 /* Ship.scn */; };
@@ -76,6 +71,9 @@
 		2FEB920328FD67AA00108A56 /* RB+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91F928FD67AA00108A56 /* RB+UIColor.swift */; };
 		2FEB920528FD67AA00108A56 /* RBLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91FB28FD67AA00108A56 /* RBLog.swift */; };
 		2FEB920628FD67AA00108A56 /* RBPerlinNoiseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB91FC28FD67AA00108A56 /* RBPerlinNoiseGenerator.swift */; };
+		41F7A1E729012CF40019181F /* Rubik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7A1E629012CF40019181F /* Rubik.swift */; };
+		41F7A1E929012D110019181F /* JosefineSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7A1E829012D110019181F /* JosefineSans.swift */; };
+		41F7A1EC29012D530019181F /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7A1EB29012D530019181F /* ProgressBar.swift */; };
 		B809C9B628FF0C9A00AB555A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B809C9B528FF0C9A00AB555A /* Color.swift */; };
 		B809C9B828FF19A300AB555A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B809C9B728FF19A300AB555A /* Font.swift */; };
 		B809C9CC28FF9D9A00AB555A /* JosefinSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */; };
@@ -113,11 +111,6 @@
 		2F3FEB2B28FE84CF003DB990 /* ElevatedLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatedLink.swift; sourceTree = "<group>"; };
 		2F3FEB2D28FE84CF003DB990 /* Divider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		2F3FEB2F28FE84CF003DB990 /* Headline1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Headline1.swift; sourceTree = "<group>"; };
-		2F3FEB3028FE84CF003DB990 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
-		2F3FEB3128FE84CF003DB990 /* Footnote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Footnote.swift; sourceTree = "<group>"; };
-		2F3FEB3228FE84CF003DB990 /* Body1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Body1.swift; sourceTree = "<group>"; };
-		2F3FEB3328FE84CF003DB990 /* Caption1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Caption1.swift; sourceTree = "<group>"; };
-		2F3FEB3428FE84CF003DB990 /* Title1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title1.swift; sourceTree = "<group>"; };
 		2F3FEB6B28FFE77F003DB990 /* Project.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Project.usdc; sourceTree = "<group>"; };
 		2F3FEB6C28FFE77F003DB990 /* SmallTree.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = SmallTree.usdz; sourceTree = "<group>"; };
 		2F3FEB6D28FFE77F003DB990 /* Ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Ship.scn; sourceTree = "<group>"; };
@@ -153,6 +146,9 @@
 		2FEB91F928FD67AA00108A56 /* RB+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RB+UIColor.swift"; sourceTree = "<group>"; };
 		2FEB91FB28FD67AA00108A56 /* RBLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBLog.swift; sourceTree = "<group>"; };
 		2FEB91FC28FD67AA00108A56 /* RBPerlinNoiseGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBPerlinNoiseGenerator.swift; sourceTree = "<group>"; };
+		41F7A1E629012CF40019181F /* Rubik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubik.swift; sourceTree = "<group>"; };
+		41F7A1E829012D110019181F /* JosefineSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JosefineSans.swift; sourceTree = "<group>"; };
+		41F7A1EB29012D530019181F /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		B809C9B528FF0C9A00AB555A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B809C9B728FF19A300AB555A /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		B809C9C928FF97F800AB555A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -206,6 +202,7 @@
 		2F3FEB0E28FE84CF003DB990 /* Atom */ = {
 			isa = PBXGroup;
 			children = (
+				41F7A1EA29012D430019181F /* Progress Bar */,
 				2F3FEB0F28FE84CF003DB990 /* Radio */,
 				2F3FEB1128FE84CF003DB990 /* Card */,
 				2F3FEB1328FE84CF003DB990 /* Loading */,
@@ -330,11 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				2F3FEB2F28FE84CF003DB990 /* Headline1.swift */,
-				2F3FEB3028FE84CF003DB990 /* Header.swift */,
-				2F3FEB3128FE84CF003DB990 /* Footnote.swift */,
-				2F3FEB3228FE84CF003DB990 /* Body1.swift */,
-				2F3FEB3328FE84CF003DB990 /* Caption1.swift */,
-				2F3FEB3428FE84CF003DB990 /* Title1.swift */,
+				41F7A1E629012CF40019181F /* Rubik.swift */,
+				41F7A1E829012D110019181F /* JosefineSans.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -482,6 +476,14 @@
 			path = shared;
 			sourceTree = "<group>";
 		};
+		41F7A1EA29012D430019181F /* Progress Bar */ = {
+			isa = PBXGroup;
+			children = (
+				41F7A1EB29012D530019181F /* ProgressBar.swift */,
+			);
+			path = "Progress Bar";
+			sourceTree = "<group>";
+		};
 		B809C9B428FF0C8C00AB555A /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,7 +545,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "chapper" */;
+			buildConfigurationList = 2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "Chapper" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -589,14 +591,15 @@
 				2F3FEB6028FE84CF003DB990 /* Divider.swift in Sources */,
 				2FEB91DF28FD671B00108A56 /* GameLevel.swift in Sources */,
 				2F3FEB3828FE84CF003DB990 /* LiveData.swift in Sources */,
+				41F7A1E729012CF40019181F /* Rubik.swift in Sources */,
 				2F3FEB8328FFF781003DB990 /* StoryData.swift in Sources */,
 				2FEB920128FD67AA00108A56 /* RB+SKAction.swift in Sources */,
 				2F3FEB3E28FE84CF003DB990 /* String.swift in Sources */,
 				2F3FEB5B28FE84CF003DB990 /* ImageButton.swift in Sources */,
 				B809C9B828FF19A300AB555A /* Font.swift in Sources */,
-				2F3FEB6228FE84CF003DB990 /* Header.swift in Sources */,
 				2F3FEB5D28FE84CF003DB990 /* TextButton.swift in Sources */,
 				2F3FEB3B28FE84CF003DB990 /* Scheme.swift in Sources */,
+				41F7A1EC29012D530019181F /* ProgressBar.swift in Sources */,
 				B809C9B628FF0C9A00AB555A /* Color.swift in Sources */,
 				2F3FEB3D28FE84CF003DB990 /* Screen.swift in Sources */,
 				2F3FEB5E28FE84CF003DB990 /* Link.swift in Sources */,
@@ -605,7 +608,7 @@
 				2FEB91F028FD676700108A56 /* Ring.swift in Sources */,
 				2F3FEB3A28FE84CF003DB990 /* State.swift in Sources */,
 				2F3FEB4E28FE84CF003DB990 /* Radio.swift in Sources */,
-				2F3FEB6428FE84CF003DB990 /* Body1.swift in Sources */,
+				41F7A1E929012D110019181F /* JosefineSans.swift in Sources */,
 				2F3FEB5628FE84CF003DB990 /* CircleImage.swift in Sources */,
 				2FEB91FF28FD67AA00108A56 /* RBUtility.swift in Sources */,
 				2FEB91CB28FD609000108A56 /* ContentView.swift in Sources */,
@@ -617,7 +620,6 @@
 				2FEB91EF28FD676700108A56 /* Enemy.swift in Sources */,
 				2F3FEB5C28FE84CF003DB990 /* CircleButton.swift in Sources */,
 				2F3FEB7828FFF315003DB990 /* MainMenuView.swift in Sources */,
-				2F3FEB6528FE84CF003DB990 /* Caption1.swift in Sources */,
 				2F3FEB5228FE84CF003DB990 /* NumberField.swift in Sources */,
 				2F3FEB7228FFF284003DB990 /* StoryListView.swift in Sources */,
 				2FEB91E628FD672C00108A56 /* GameObject.swift in Sources */,
@@ -628,7 +630,6 @@
 				2F3FEB7B28FFF32B003DB990 /* HelpView.swift in Sources */,
 				2F3FEB4F28FE84CF003DB990 /* Card.swift in Sources */,
 				2FEB91E528FD672C00108A56 /* Player.swift in Sources */,
-				2F3FEB6328FE84CF003DB990 /* Footnote.swift in Sources */,
 				2F3FEB5728FE84CF003DB990 /* ElevatedButton.swift in Sources */,
 				2FEB91C928FD609000108A56 /* ChapperApp.swift in Sources */,
 				2F3FEB8128FFF4B0003DB990 /* StoryView.swift in Sources */,
@@ -648,7 +649,6 @@
 				2FEB91ED28FD676700108A56 /* Bullet.swift in Sources */,
 				2FEB920328FD67AA00108A56 /* RB+UIColor.swift in Sources */,
 				2F3FEB5928FE84CF003DB990 /* OutlinedButton.swift in Sources */,
-				2F3FEB6628FE84CF003DB990 /* Title1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,7 +832,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "chapper" */ = {
+		2FEB91C028FD609000108A56 /* Build configuration list for PBXProject "Chapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FEB91D128FD609200108A56 /* Debug */,
