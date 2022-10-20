@@ -12,7 +12,7 @@ struct AppElevatedButton: View {
     @State var label: String = "Button"
     @State var height: Double = 0
     @State var width: Double = 0
-    @State var color: Color = Color.white
+    @State var color: Color = Color.text.primary
     @State var backgroundColor: Color = Color.sign.primary
     
     var onClick: () -> Void = {}
@@ -22,6 +22,7 @@ struct AppElevatedButton: View {
         Button(action: {
             self.onClick()
         }, label: {
+
             Text(label)
                 .font(.rubik(.regular, size: .body))
                 .fontWeight(.semibold)
@@ -29,8 +30,8 @@ struct AppElevatedButton: View {
                 .padding()
                 .frame(minWidth: width < 1 ? 0.0 : width, idealWidth: width < 1 ? .infinity : width, maxWidth: width < 1 ? .infinity :width, minHeight: height < 0  ? 0 : height, idealHeight: (height < 1) ? 12 : height,  maxHeight: (height < 1) ? 12 : height)
                 .padding()
-                .background(backgroundColor).cornerRadius(10)
-                .shadow(color: .gray, radius: 2, x: 0, y: 2)
+                .background(backgroundColor).cornerRadius(50)
+
         })
     }
 }

@@ -32,7 +32,7 @@ struct AppCircleButton: View {
             if(source == AppCircleButtonContentSource.Image) { image }
             if(source == AppCircleButtonContentSource.Text) { Text(text!).foregroundColor(color) }
         }).frame(width: size, height: size).padding().background(backgroundColor).cornerRadius(40)
-            .shadow(color: .gray, radius: 2, x: 0, y: 2)
+//            .shadow(color: .gray, radius: 2, x: 0, y: 2)
     }
 }
 
