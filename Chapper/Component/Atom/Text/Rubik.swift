@@ -7,14 +7,26 @@
 
 import SwiftUI
 
+
 struct AppRubik: View {
+    
+    var text: String = ""
+    var rubikSize: fontType
+    var fontWeight: Font.Weight = Font.Weight.medium
+    var fontColor: Color = Color.black
+    
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(text)
+            .font(.rubik(.regular, size: rubikSize))
+            .fontWeight(fontWeight)
+            .foregroundColor(fontColor)
     }
+    
 }
 
 struct AppRubik_Previews: PreviewProvider {
     static var previews: some View {
-        AppRubik()
+        AppRubik(text: "String", rubikSize: fontType.regular)
     }
 }
