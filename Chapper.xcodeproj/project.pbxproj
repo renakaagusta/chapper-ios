@@ -78,6 +78,7 @@
 		B809C9B828FF19A300AB555A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B809C9B728FF19A300AB555A /* Font.swift */; };
 		B809C9CC28FF9D9A00AB555A /* JosefinSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */; };
 		B809C9CE28FFB2F900AB555A /* Rubik.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B809C9CD28FFB2F900AB555A /* Rubik.ttf */; };
+		B8D96F9C29013EA800682705 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D96F9B29013EA800682705 /* TutorialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,7 @@
 		B809C9C928FF97F800AB555A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JosefinSans.ttf; sourceTree = "<group>"; };
 		B809C9CD28FFB2F900AB555A /* Rubik.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rubik.ttf; sourceTree = "<group>"; };
+		B8D96F9B29013EA800682705 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +364,7 @@
 		2F3FEB7428FFF2C4003DB990 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8D96F9A29013E9700682705 /* Tutorial */,
 				2F3FEB7F28FFF48F003DB990 /* Story */,
 				2F3FEB7C28FFF417003DB990 /* StorySummary */,
 				2F3FEB7928FFF31A003DB990 /* Help */,
@@ -510,6 +513,14 @@
 			path = "Josefin sans";
 			sourceTree = "<group>";
 		};
+		B8D96F9A29013E9700682705 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				B8D96F9B29013EA800682705 /* TutorialView.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -614,6 +625,7 @@
 				2FEB91CB28FD609000108A56 /* ContentView.swift in Sources */,
 				2FEB91EE28FD676700108A56 /* Plane.swift in Sources */,
 				2FEB91F128FD676700108A56 /* Handicap.swift in Sources */,
+				B8D96F9C29013EA800682705 /* TutorialView.swift in Sources */,
 				2F3FEB5A28FE84CF003DB990 /* LinkButton.swift in Sources */,
 				2F3FEB5828FE84CF003DB990 /* OutlinedCircleButton.swift in Sources */,
 				2F3FEB3928FE84CF003DB990 /* Constant.swift in Sources */,
