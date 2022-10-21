@@ -14,5 +14,7 @@ struct StoryData: Identifiable {
     var thumbnail: String
     var sceneName: String
     var sceneExtension: String
+    var backsound: String
+    var backsoundExtention: String
     var objectList: [ObjectScene]
 }
