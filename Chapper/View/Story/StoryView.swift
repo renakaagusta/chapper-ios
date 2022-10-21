@@ -6,6 +6,10 @@
 
 import SwiftUI
 import SceneKit
+import AVFoundation
+
+var backsoundPlayer: AVAudioPlayer!
+var narationPlayer: AVAudioPlayer!
 
 enum DialogPosition {
     case Top, Bottom
@@ -60,7 +64,7 @@ struct StoryView: View {
         
         showDialog(position: DialogPosition.Top, child: AnyView(VStack{
         
-        }.background(Color.bg.primary).frame(width: 100, height: 100)))
+        }.background(Color.spot.primary).frame(width: 100, height: 100)))
     }
     
     func handleTap(objectName: String) {
@@ -95,7 +99,10 @@ struct StoryView: View {
                     .padding()
                 }
             }
+            //.blur(radius: 5)
             .onAppear(){
+                playBacksound(soundName: "sadGusde")
+                playNaration(soundName: "narasi01")
                 gameView.loadData(scene: self.scene!, onTap: {
                     objectName in
                     handleTap(objectName: objectName!)
@@ -105,6 +112,42 @@ struct StoryView: View {
         }
         
     }
+    
+    //function for backsound music
+    func playBacksound(soundName: String) {
+        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            backsoundPlayer = try AVAudioPlayer(contentsOf: url!)
+            backsoundPlayer.setVolume(0.50, fadeDuration: 0.1)
+            backsoundPlayer?.play()
+            backsoundPlayer.numberOfLoops = 5
+        } catch {
+            print("error")
+        }
+    }
+    
+    //function for naration
+    func playNaration(soundName: String) {
+        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            narationPlayer = try AVAudioPlayer(contentsOf: url!)
+            narationPlayer?.play()
+            narationPlayer.numberOfLoops = 5
+        } catch {
+            print("error")
+        }
+    }
+    
 }
 
 struct StoryView_Previews: PreviewProvider {
@@ -112,3 +155,4 @@ struct StoryView_Previews: PreviewProvider {
         StoryView(data: StoryData(id: "0",title: "Example", description: "", thumbnail: "", sceneName: "Project", objectList: []))
     }
 }
+
