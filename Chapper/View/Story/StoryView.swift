@@ -201,7 +201,83 @@ struct StoryView: View {
         } catch {
             print("error")
         }
+        
+        func showDialog(position: DialogPosition, child: AnyView) {
+            self.dialogVisibility = true
+            if(position == DialogPosition.Top) {
+                self.dialogView = AnyView(VStack {
+                    child
+                    Spacer()
+                })
+            } else {
+                self.dialogView = AnyView(VStack {
+                    Spacer()
+                    child
+                })
+            }
+        }
+        
+        func hideDialog() {
+            self.dialogVisibility = false
+        }
+        
+        func updateState() {
+            if(state == StoryState.Naration) {
+                state = StoryState.Task
+            } else if(state == StoryState.Tutorial) {
+                state = StoryState.Task
+            } else if(state == StoryState.Task) {
+                if(focusedObjectIndex <
+                   data.objectList.count - 1) {
+                    focusedObjectIndex = focusedObjectIndex + 1
+                }
+            }
+            
+        }
+    
+    func resetCamera() {
+        let camera = view.defaultCameraController
+        
+        print("POSITION")
+        print(camera.pointOfView?.position)
+        print("EULER ANGLE")
+        print(camera.pointOfView?.eulerAngles)
+        print("SCALE")
+        print(camera.pointOfView?.scale)
+        
+        camera.pointOfView?.position = SCNVector3(x: 0, y: 178, z: 340)
+        camera.pointOfView?.eulerAngles = SCNVector3(x:  -0.22689278, y: 0, z: 0)
+        camera.pointOfView?.scale = SCNVector3(x: 1, y: 1, z: 1)
     }
+        
+        func updateTime() {
+            elapsedTime = elapsedTime + 1
+            
+           resetCamera()
+            
+            var showedInstruction: String?
+            for (index, instruction) in data.objectList[focusedObjectIndex].instructionList!.enumerated() {
+                if(showedInstruction == nil) {
+                    if(index != data.objectList[focusedObjectIndex].instructionList!.count - 1) {
+                        if(elapsedTime >= instruction.startedAt && elapsedTime < data.objectList[focusedObjectIndex].instructionList![index + 1].startedAt) {
+                            showedInstruction = instruction.text
+                        }
+                    } else {
+                        hideDialog()
+                        showedInstruction = instruction.text
+                        if(elapsedTime > data.objectList[focusedObjectIndex].narationDuration) {
+                            updateState()
+                        }
+                    }
+                }
+            }
+            
+            if(state == StoryState.Naration && showedInstruction != nil) {
+                showDialog(position: DialogPosition.Top, child: AnyView(AppRubik(text: showedInstruction!, rubikSize: fontType.body, fontWeight: .bold , fontColor: Color.text.primary)))
+            }
+            
+            narationsProgress = elapsedTime / data.objectList[focusedObjectIndex].narationDuration
+        }
     
     func playNaration(soundName: String, soundExtention: String) {
        
