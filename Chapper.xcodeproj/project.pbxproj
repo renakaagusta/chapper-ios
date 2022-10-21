@@ -439,7 +439,7 @@
 		2FEB91C728FD609000108A56 /* Chapper */ = {
 			isa = PBXGroup;
 			children = (
-				B8D96F9D290168BE00682705 /* 1. Sprint 1 */,
+				B8D96F9D290168BE00682705 /* Example */,
 				2F3FEB7428FFF2C4003DB990 /* View */,
 				2F3FEB7328FFF2A7003DB990 /* Model */,
 				B809C9C928FF97F800AB555A /* Info.plist */,
@@ -448,7 +448,7 @@
 				2F3FEAF128FE84CF003DB990 /* Component */,
 				2F3FEAE528FE84CE003DB990 /* Helpers */,
 				2F3FEAE928FE84CE003DB990 /* Utils */,
-				2FEB91F228FD67AA00108A56 /* shared */,
+				2FEB91F228FD67AA00108A56 /* Shared */,
 				2FEB91D728FD60A700108A56 /* GameViewController.swift */,
 				2F3FEAE228FE517A003DB990 /* art.scnassets */,
 				2F3FEB6B28FFE77F003DB990 /* Project.usdc */,
@@ -470,7 +470,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2FEB91F228FD67AA00108A56 /* shared */ = {
+		2FEB91F228FD67AA00108A56 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				2FEB91F328FD67AA00108A56 /* RB+CGPoint.swift */,
@@ -483,7 +483,7 @@
 				2FEB91FB28FD67AA00108A56 /* RBLog.swift */,
 				2FEB91FC28FD67AA00108A56 /* RBPerlinNoiseGenerator.swift */,
 			);
-			path = shared;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		41F7A1EA29012D430019181F /* Progress Bar */ = {
@@ -528,7 +528,7 @@
 			path = Tutorial;
 			sourceTree = "<group>";
 		};
-		B8D96F9D290168BE00682705 /* 1. Sprint 1 */ = {
+		B8D96F9D290168BE00682705 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				B8D96F9E290168BE00682705 /* smallTree.usdz */,
@@ -537,7 +537,7 @@
 				B8D96FA1290168BE00682705 /* Rock Texture.jpeg */,
 				B8D96FA2290168BE00682705 /* stars.jpg */,
 			);
-			path = "1. Sprint 1";
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

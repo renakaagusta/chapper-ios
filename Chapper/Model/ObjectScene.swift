@@ -12,4 +12,12 @@ struct ObjectScene {
     var description: String
     var hint: String
     var tag: String
+    var narationDuration: CGFloat
+    var instructionList: [Instruction]?
+}
+
+struct Instruction: Hashable, Codable, Identifiable {
+    var id: String
+    var text: String
+    var startedAt: CGFloat
 }
