@@ -315,7 +315,6 @@ struct StoryView: View {
                     .frame(width: UIScreen.width, height: UIScreen.height)
                 }
             }
-            //.blur(radius: 5)
             .onAppear(){
                 playBacksound(soundName: data.backsound, soundExtention: data.backsoundExtention)
                 playNaration(soundName: data.objectList[focusedObjectIndex].narationSound, soundExtention: data.objectList[focusedObjectIndex].narationSoundExtention)
@@ -330,42 +329,6 @@ struct StoryView: View {
         }
         
     }
-    
-    //function for backsound music
-    func playBacksound(soundName: String) {
-        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
-        
-        guard url != nil else {
-            return
-        }
-        
-        do {
-            backsoundPlayer = try AVAudioPlayer(contentsOf: url!)
-            backsoundPlayer.setVolume(0.50, fadeDuration: 0.1)
-            backsoundPlayer?.play()
-            backsoundPlayer.numberOfLoops = 5
-        } catch {
-            print("error")
-        }
-    }
-    
-    //function for naration
-    func playNaration(soundName: String) {
-        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
-        
-        guard url != nil else {
-            return
-        }
-        
-        do {
-            narationPlayer = try AVAudioPlayer(contentsOf: url!)
-            narationPlayer?.play()
-            narationPlayer.numberOfLoops = 5
-        } catch {
-            print("error")
-        }
-    }
-    
 }
 
 struct StoryView_Previews: PreviewProvider {
@@ -373,4 +336,3 @@ struct StoryView_Previews: PreviewProvider {
         StoryView(data: StoryData(id: "0",title: "Example", description: "", thumbnail: "", sceneName: "Project", sceneExtension: "scn", backsound: "coba", backsoundExtention: "mp3", objectList: []))
     }
 }
-
