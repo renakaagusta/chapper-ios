@@ -75,7 +75,7 @@ class GameViewController: UIViewController {
                 SCNTransaction.commit()
             }
             
-            material.emission.contents = UIColor.red
+            material.emission.contents = UIColor(Color.wrong.primary)
             
             SCNTransaction.commit()
         }
