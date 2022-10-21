@@ -46,7 +46,7 @@ struct StoryListView: View {
         VStack {
             List {
                 ForEach(storyList) { story in
-                    NavigationLink(destination: StoryView(data: story), label: {
+                    NavigationLink(destination: StoryView(data: story).navigationBarBackButtonHidden(true), label: {
                         Text(story.title)
                     })
                 }
