@@ -80,8 +80,14 @@
 		B809C9CC28FF9D9A00AB555A /* JosefinSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */; };
 		B809C9CE28FFB2F900AB555A /* Rubik.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B809C9CD28FFB2F900AB555A /* Rubik.ttf */; };
 		B8D96F9C29013EA800682705 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D96F9B29013EA800682705 /* TutorialView.swift */; };
-		B8D96FBF2902FACD00682705 /* narasi01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FBE2902FACD00682705 /* narasi01.mp3 */; };
-		B8D96FC12902FADF00682705 /* sadGusde.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FC02902FADF00682705 /* sadGusde.mp3 */; };
+		B8D96FA5290282F200682705 /* 3DAssetS1.scn in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FA4290282F200682705 /* 3DAssetS1.scn */; };
+		B8D96FA8290286BB00682705 /* sadGusde.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FA7290286BB00682705 /* sadGusde.mp3 */; };
+		B8D96FAF29028E3F00682705 /* narasi01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FAE29028E3F00682705 /* narasi01.mp3 */; };
+		B8D96FB52902A39400682705 /* hand.zoom.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FB12902A39400682705 /* hand.zoom.gif */; };
+		B8D96FB62902A39400682705 /* hand.swipe.left.right.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FB22902A39400682705 /* hand.swipe.left.right.gif */; };
+		B8D96FB72902A39400682705 /* hand.swipe.up.down.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FB32902A39400682705 /* hand.swipe.up.down.gif */; };
+		B8D96FB82902A39400682705 /* hand.tap.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FB42902A39400682705 /* hand.tap.gif */; };
+		B8D96FBA2902A48B00682705 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D96FB92902A48B00682705 /* GestureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,8 +170,14 @@
 		B8D96F9F290168BE00682705 /* simple-trees-collection.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "simple-trees-collection.usdc"; sourceTree = "<group>"; };
 		B8D96FA1290168BE00682705 /* Rock Texture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rock Texture.jpeg"; sourceTree = "<group>"; };
 		B8D96FA2290168BE00682705 /* stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpg; sourceTree = "<group>"; };
-		B8D96FBE2902FACD00682705 /* narasi01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = narasi01.mp3; sourceTree = "<group>"; };
-		B8D96FC02902FADF00682705 /* sadGusde.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sadGusde.mp3; sourceTree = "<group>"; };
+		B8D96FA4290282F200682705 /* 3DAssetS1.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = 3DAssetS1.scn; sourceTree = "<group>"; };
+		B8D96FA7290286BB00682705 /* sadGusde.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sadGusde.mp3; sourceTree = "<group>"; };
+		B8D96FAE29028E3F00682705 /* narasi01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = narasi01.mp3; sourceTree = "<group>"; };
+		B8D96FB12902A39400682705 /* hand.zoom.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hand.zoom.gif; sourceTree = "<group>"; };
+		B8D96FB22902A39400682705 /* hand.swipe.left.right.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hand.swipe.left.right.gif; sourceTree = "<group>"; };
+		B8D96FB32902A39400682705 /* hand.swipe.up.down.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hand.swipe.up.down.gif; sourceTree = "<group>"; };
+		B8D96FB42902A39400682705 /* hand.tap.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hand.tap.gif; sourceTree = "<group>"; };
+		B8D96FB92902A48B00682705 /* GestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +226,7 @@
 		2F3FEB0E28FE84CF003DB990 /* Atom */ = {
 			isa = PBXGroup;
 			children = (
+				B8D96FB02902A37D00682705 /* Gesture */,
 				41F7A1EA29012D430019181F /* Progress Bar */,
 				2F3FEB0F28FE84CF003DB990 /* Radio */,
 				2F3FEB1128FE84CF003DB990 /* Card */,
@@ -443,7 +456,7 @@
 		2FEB91C728FD609000108A56 /* Chapper */ = {
 			isa = PBXGroup;
 			children = (
-				B8D96FBB2902F9F100682705 /* Sound */,
+				B8D96FA62902869600682705 /* Music */,
 				B8D96F9D290168BE00682705 /* 1. Sprint 1 */,
 				2F3FEB7428FFF2C4003DB990 /* View */,
 				2F3FEB7328FFF2A7003DB990 /* Model */,
@@ -539,35 +552,48 @@
 				B8D96F9E290168BE00682705 /* smallTree.usdz */,
 				2FFEE2B129029A84007E4CED /* 3DAssetS1.scn */,
 				B8D96F9F290168BE00682705 /* simple-trees-collection.usdc */,
+				B8D96FA4290282F200682705 /* 3DAssetS1.scn */,
 				B8D96FA1290168BE00682705 /* Rock Texture.jpeg */,
 				B8D96FA2290168BE00682705 /* stars.jpg */,
 			);
 			path = "1. Sprint 1";
 			sourceTree = "<group>";
 		};
-		B8D96FBB2902F9F100682705 /* Sound */ = {
+		B8D96FA62902869600682705 /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				B8D96FBD2902FAAB00682705 /* Naration */,
-				B8D96FBC2902FA9900682705 /* Backsound */,
+				B8D96FAD29028E3000682705 /* Narations */,
+				B8D96FAC29028E2500682705 /* Backsounds */,
 			);
-			path = Sound;
+			path = Music;
 			sourceTree = "<group>";
 		};
-		B8D96FBC2902FA9900682705 /* Backsound */ = {
+		B8D96FAC29028E2500682705 /* Backsounds */ = {
 			isa = PBXGroup;
 			children = (
-				B8D96FC02902FADF00682705 /* sadGusde.mp3 */,
+				B8D96FA7290286BB00682705 /* sadGusde.mp3 */,
 			);
-			path = Backsound;
+			path = Backsounds;
 			sourceTree = "<group>";
 		};
-		B8D96FBD2902FAAB00682705 /* Naration */ = {
+		B8D96FAD29028E3000682705 /* Narations */ = {
 			isa = PBXGroup;
 			children = (
-				B8D96FBE2902FACD00682705 /* narasi01.mp3 */,
+				B8D96FAE29028E3F00682705 /* narasi01.mp3 */,
 			);
-			path = Naration;
+			path = Narations;
+			sourceTree = "<group>";
+		};
+		B8D96FB02902A37D00682705 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				B8D96FB22902A39400682705 /* hand.swipe.left.right.gif */,
+				B8D96FB32902A39400682705 /* hand.swipe.up.down.gif */,
+				B8D96FB42902A39400682705 /* hand.tap.gif */,
+				B8D96FB12902A39400682705 /* hand.zoom.gif */,
+				B8D96FB92902A48B00682705 /* GestureView.swift */,
+			);
+			path = Gesture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -628,17 +654,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D96FAF29028E3F00682705 /* narasi01.mp3 in Resources */,
 				2F3FEAE428FE53BE003DB990 /* art.scnassets in Resources */,
 				B809C9CC28FF9D9A00AB555A /* JosefinSans.ttf in Resources */,
+				B8D96FB82902A39400682705 /* hand.tap.gif in Resources */,
 				2FEB91D028FD609200108A56 /* Preview Assets.xcassets in Resources */,
 				2FEB91CD28FD609200108A56 /* Assets.xcassets in Resources */,
+				B8D96FB62902A39400682705 /* hand.swipe.left.right.gif in Resources */,
+				B8D96FA8290286BB00682705 /* sadGusde.mp3 in Resources */,
 				2F3FEB6E28FFE780003DB990 /* Project.usdc in Resources */,
+				B8D96FB72902A39400682705 /* hand.swipe.up.down.gif in Resources */,
 				2F3FEB6F28FFE780003DB990 /* SmallTree.usdz in Resources */,
-				2FFEE2B229029A84007E4CED /* 3DAssetS1.scn in Resources */,
+				B8D96FA5290282F200682705 /* 3DAssetS1.scn in Resources */,
 				2F3FEB7028FFE780003DB990 /* Ship.scn in Resources */,
 				B8D96FC12902FADF00682705 /* sadGusde.mp3 in Resources */,
 				B809C9CE28FFB2F900AB555A /* Rubik.ttf in Resources */,
 				B8D96FBF2902FACD00682705 /* narasi01.mp3 in Resources */,
+				B8D96FB52902A39400682705 /* hand.zoom.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +710,7 @@
 				2FEB91EE28FD676700108A56 /* Plane.swift in Sources */,
 				2FEB91F128FD676700108A56 /* Handicap.swift in Sources */,
 				B8D96F9C29013EA800682705 /* TutorialView.swift in Sources */,
+				B8D96FBA2902A48B00682705 /* GestureView.swift in Sources */,
 				2F3FEB5A28FE84CF003DB990 /* LinkButton.swift in Sources */,
 				2F3FEB5828FE84CF003DB990 /* OutlinedCircleButton.swift in Sources */,
 				2F3FEB3928FE84CF003DB990 /* Constant.swift in Sources */,
