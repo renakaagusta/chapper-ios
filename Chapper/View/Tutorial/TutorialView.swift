@@ -16,8 +16,8 @@ struct TutorialView: View {
     
         VStack {
             
-            AppProgressBar(width:300, height: 7, percent: percent)
-                .padding()
+//            AppProgressBar(width:300, height: 7, percent: percent)
+//                .padding()
             
             AppRubik(text: text, rubikSize: fontType.body, fontWeight: .bold , fontColor: Color.text.primary)
             

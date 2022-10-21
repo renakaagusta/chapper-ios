@@ -13,5 +13,6 @@ struct StoryData: Identifiable {
     var description: String
     var thumbnail: String
     var sceneName: String
+    var sceneExtension: String
     var objectList: [ObjectScene]
 }
