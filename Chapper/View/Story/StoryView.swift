@@ -6,6 +6,11 @@
 
 import SwiftUI
 import SceneKit
+import AVFoundation
+
+//variable for sounds and music
+var backsoundPlayer: AVAudioPlayer!
+var narationPlayer: AVAudioPlayer!
 
 enum DialogPosition {
     case Top, Bottom
@@ -178,24 +183,66 @@ struct StoryView: View {
             narationsProgress = elapsedTime / data.objectList[focusedObjectIndex].narationDuration
         }
     
+    //function for backsound and sound
+    func playBacksound(soundName: String, soundExtention: String) {
+        
+        let url = Bundle.main.url(forResource: soundName, withExtension: soundExtention)
+        
+        //do nothing when url empty
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            backsoundPlayer = try AVAudioPlayer(contentsOf: url!)
+            backsoundPlayer?.setVolume(0.3, fadeDuration: 0.1)
+            backsoundPlayer?.play()
+        } catch {
+            print("error")
+        }
+    }
+    
+    func playNaration(soundName: String, soundExtention: String) {
+       
+        let url = Bundle.main.url(forResource: soundName, withExtension: soundExtention)
+        
+        //do nothing when url empty
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            narationPlayer = try AVAudioPlayer(contentsOf: url!)
+            narationPlayer?.play()
+            narationPlayer.numberOfLoops = 5
+        } catch {
+            print("error")
+        }
+    }
+    
+    
     var body: some View {
         NavigationView {
             ZStack {
                 gameView
                 if(dialogVisibility == true) {
-                    VStack{
-                            AppProgressBar(width:300, height: 7, progress: Binding(get:{narationsProgress}, set: {_ in true}))
-                    .padding()
-                                      if(dialogVisibility == true) {
-                                          dialogView
-                                      }
-                            Spacer()
+                    VStack {
+                        AppProgressBar(width:300, height: 7, progress: Binding(get:{narationsProgress}, set: {_ in true}))
+                        .padding(.top, 50)
+                            if(dialogVisibility == true) {
+                                dialogView
+                            }
+    
+                        Spacer()
                     }
-                    .frame(width: UIScreen.width, height: UIScreen.height)
                     .padding()
+                    .frame(width: UIScreen.width, height: UIScreen.height)
                 }
             }
             .onAppear(){
+                playBacksound(soundName: data.backsound, soundExtention: data.backsoundExtention)
+                playNaration(soundName: data.objectList[focusedObjectIndex].narationSound, soundExtention: data.objectList[focusedObjectIndex].narationSoundExtention)
+                
                 gameView.loadData(scene: self.scene!, onTap: {
                         hitResults in
                     handleTap(hitResults: hitResults)
@@ -210,6 +257,6 @@ struct StoryView: View {
 
 struct StoryView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryView(data: StoryData(id: "0",title: "Example", description: "", thumbnail: "", sceneName: "Project", sceneExtension: "scn", objectList: []))
+        StoryView(data: StoryData(id: "0",title: "Example", description: "", thumbnail: "", sceneName: "Project", sceneExtension: "scn", backsound: "coba", backsoundExtention: "mp3", objectList: []))
     }
 }

@@ -17,6 +17,8 @@ struct StoryListView: View {
                thumbnail: "",
                sceneName: "3DAssetS1",
                sceneExtension: "scn",
+               backsound: "sadGusde",
+               backsoundExtention: "mp3",
                objectList: [
                    ObjectScene(
                        title: "Object 1",
@@ -24,8 +26,10 @@ struct StoryListView: View {
                        hint: "Hint 1",
                        tag: "Cube_001",
                        narationDuration: 15,
+                       narationSound: "narasi01",
+                       narationSoundExtention: "mp3",
                        instructionList: [
-                           Instruction(id: "1", text: "Narasi 1", startedAt: 0),
+                           Instruction(id: "1", text: "Narasi 1",  startedAt: 0),
                            Instruction(id: "1",text: "Narasi 2", startedAt: 5),
                            Instruction(id: "1",text: "Narasi 3", startedAt: 10)
                        ]
@@ -39,13 +43,22 @@ struct StoryListView: View {
                thumbnail: "",
                sceneName: "3DAssetS1",
                sceneExtension: "scn",
+               backsound: "sadGusde",
+               backsoundExtention: "mp3",
                objectList: [
                    ObjectScene(
                        title: "Object 1",
                        description: "Description 1",
                        hint: "Hint 1",
                        tag: "Cube_001",
-                       narationDuration: 15
+                       narationDuration: 15,
+                       narationSound: "narasi01",
+                       narationSoundExtention: "mp3",
+                       instructionList: [
+                           Instruction(id: "1", text: "Narasi 1",  startedAt: 0),
+                           Instruction(id: "1",text: "Narasi 2", startedAt: 5),
+                           Instruction(id: "1",text: "Narasi 3", startedAt: 10)
+                       ]
                    )
                ]
            )

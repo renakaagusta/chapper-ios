@@ -13,6 +13,8 @@ struct ObjectScene {
     var hint: String
     var tag: String
     var narationDuration: CGFloat
+    var narationSound : String
+    var narationSoundExtention: String
     var instructionList: [Instruction]?
 }
 
