@@ -241,7 +241,7 @@ struct StoryView: View {
             }
             .onAppear(){
                 playBacksound(soundName: data.backsound, soundExtention: data.backsoundExtention)
-                playNaration(soundName: data.objectList, soundExtention: data.objectList)
+                playNaration(soundName: data.objectList[focusedObjectIndex].narationSound, soundExtention: data.objectList[focusedObjectIndex].narationSoundExtention)
                 
                 gameView.loadData(scene: self.scene!, onTap: {
                         hitResults in
