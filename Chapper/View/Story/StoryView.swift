@@ -197,6 +197,7 @@ struct StoryView: View {
             backsoundPlayer = try AVAudioPlayer(contentsOf: url!)
             backsoundPlayer?.setVolume(0.3, fadeDuration: 0.1)
             backsoundPlayer?.play()
+            backsoundPlayer.numberOfLoops = 5
         } catch {
             print("error")
         }
@@ -214,7 +215,6 @@ struct StoryView: View {
         do {
             narationPlayer = try AVAudioPlayer(contentsOf: url!)
             narationPlayer?.play()
-            narationPlayer.numberOfLoops = 5
         } catch {
             print("error")
         }
@@ -240,8 +240,8 @@ struct StoryView: View {
                 }
             }
             .onAppear(){
-                //backsoundPlayer(soundName: data.backsound, soundExtention: data.backsoundExtention)
                 playBacksound(soundName: data.backsound, soundExtention: data.backsoundExtention)
+                playNaration(soundName: data.objectList[focusedObjectIndex].narationSound, soundExtention: data.objectList[focusedObjectIndex].narationSoundExtention)
                 
                 gameView.loadData(scene: self.scene!, onTap: {
                         hitResults in
