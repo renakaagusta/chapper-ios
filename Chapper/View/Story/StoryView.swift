@@ -31,6 +31,7 @@ struct StoryView: View {
     
     @State private var gestureVisibility = false
     @State private var gesture = ""
+    @State private var endingVisibility: Bool = false
     
     @State private var hintVisibility = false
     
@@ -91,6 +92,11 @@ struct StoryView: View {
                 material.normal.contents = nil
                 material.diffuse.contents = nil
                 result.node.removeFromParentNode()
+                
+                if(focusedObjectIndex == data.objectList.count - 1) {
+                    endingVisibility = true
+                    updateState()
+                }
             }
         }
     }
@@ -115,30 +121,37 @@ struct StoryView: View {
     }
     
     func updateState() {
-        let narationTime = data.objectList[focusedObjectIndex].narationDuration
-        let taskTime = narationTime + data.objectList[focusedObjectIndex].taskDuration
-        let tutorialTime = taskTime + data.objectList[focusedObjectIndex].tutorialDuration
-        if(state == StoryState.Naration && elapsedTime > narationTime) {
-            if(data.objectList[focusedObjectIndex].type == ObjectType.Opening && elapsedTime > narationTime) {
+        if(focusedObjectIndex < data.objectList.count && endingVisibility == false) {
+            let narationTime = data.objectList[focusedObjectIndex].narationDuration
+            let taskTime = narationTime + data.objectList[focusedObjectIndex].taskDuration
+            let tutorialTime = taskTime + data.objectList[focusedObjectIndex].tutorialDuration
+            if(state == StoryState.Naration && elapsedTime > narationTime) {
+                if(data.objectList[focusedObjectIndex].type == ObjectType.Opening && elapsedTime > narationTime) {
+                    focusedObjectIndex = focusedObjectIndex + 1
+                    hintVisibility = false
+                } else {
+                    state = StoryState.Task
+                    hintVisibility = true
+                    hideDialog()
+                }
+            } else if(state == StoryState.Task && elapsedTime > taskTime) {
+                state = StoryState.Tutorial
+            } else if(state == StoryState.Tutorial && elapsedTime > tutorialTime) {
+                elapsedTime = 0
                 focusedObjectIndex = focusedObjectIndex + 1
+                state = StoryState.Naration
                 hintVisibility = false
-            } else {
-                state = StoryState.Task
-                hintVisibility = true
-                hideDialog()
+                gestureVisibility = false
+                
+                if(focusedObjectIndex < data.objectList.count) {
+                    playNaration(soundName: data.objectList[focusedObjectIndex].narationSound, soundExtention: data.objectList[focusedObjectIndex].narationSoundExtention)
+                } else {
+                    endingVisibility = true
+                }
             }
-        } else if(state == StoryState.Task && elapsedTime > taskTime) {
-            state = StoryState.Tutorial
-        } else if(state == StoryState.Tutorial && elapsedTime > tutorialTime) {
-            elapsedTime = 0
-            focusedObjectIndex = focusedObjectIndex + 1
-            state = StoryState.Naration
-            hintVisibility = false
-            gestureVisibility = false
-            
-            playNaration(soundName: data.objectList[focusedObjectIndex].narationSound, soundExtention: data.objectList[focusedObjectIndex].narationSoundExtention)
+        } else {
+            endingVisibility = true
         }
-        
     }
     
     func configCamera() {
@@ -197,7 +210,9 @@ struct StoryView: View {
             }
             
             narationsProgress = elapsedTime / data.objectList[focusedObjectIndex].narationDuration
-            
+
+        } else {
+            endingVisibility = true
         }
     }
     
@@ -256,6 +271,9 @@ struct StoryView: View {
         NavigationView {
             ZStack {
                 gameView
+                if(endingVisibility) {
+                    EndingView(textEnding: "Selamat telah menyelesaikan cerita ini", buttonTextEnding: "Main lagi")
+                }
                 if(gestureVisibility) {
                     GIFView(type: .name(gesture))
                         .frame(maxHeight: 100)
@@ -263,70 +281,46 @@ struct StoryView: View {
                 }
                 if(hintVisibility) {
                     VStack {
-                        Spacer().frame(height: UIScreen.height - 600)
+                        Spacer().frame(height: UIScreen.height - 200)
                         AppRubik(text: data.objectList[focusedObjectIndex].hint, rubikSize: fontType.body, fontWeight: .bold , fontColor: Color.text.primary)
-                    }.frame(width: UIScreen.width, height: UIScreen.height)
-                }
-                VStack {
-                    AppProgressBar(width:300, height: 7, progress:Binding(get:{narationsProgress}, set: {_ in true}))
-                        .padding(.top, 50)
-                    if(dialogVisibility) {
-                        dialogView
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing) {
-                        HStack {
-                            Spacer().frame(width: UIScreen.width - 100)
-                            if(hintVisibility == false) {
-                                AppCircleButton(
-                                    size: 20,
-                                    icon: Image(systemName: "lightbulb.fill"),
-                                    color: Color.bg.primary,
-                                    backgroundColor: Color.foot.primary,
-                                    source: AppCircleButtonContentSource.Icon
-                                    //onClick:
-                                )
-                                .padding()
-                            }
                             
-                            if(hintVisibility ==  true) {
-                                AppCircleButton(
-                                    size: 20,
-                                    icon: Image(systemName: "lightbulb.fill"),
-                                    color: Color.bg.primary,
-                                    backgroundColor: Color.spot.primary,
-                                    source: AppCircleButtonContentSource.Icon
-                                    //onClick:
-                                )
-                                .padding()
-                                .shadow(color: Color.spot.primary, radius: 15, x: 0, y: 0)
-                            }
-
-                        }
-                        Spacer().frame(height: UIScreen.height - 820)
                     }
+                    .frame(width:  UIScreen.width, height: UIScreen.height)
+                }
+                if(endingVisibility == false ) {
+                    VStack {
+                        AppProgressBar(width:300, height: 7, progress:Binding(get:{narationsProgress}, set: {_ in true}))
+                            .padding(.top, 60)
+                                if(dialogVisibility && !endingVisibility) {
+                                    dialogView
+                                        .padding(.horizontal, 50)
+                                        .padding(.top)
+                                }
+                            Spacer()
+                        }
+                        .frame(width: UIScreen.width, height: UIScreen.height)
                 }
                 
-                .frame(width: UIScreen.width, height: UIScreen.height)
-            }.frame(width: UIScreen.width, height: UIScreen.height + 100)
-                .onAppear(){
-                    playBacksound(soundName: data.backsound, soundExtention: data.backsoundExtention)
-                    playNaration(soundName: data.objectList[focusedObjectIndex].narationSound, soundExtention: data.objectList[focusedObjectIndex].narationSoundExtention)
-                    
-                    gameView.loadData(scene: self.scene!, onTap: {
+            }
+            .frame(width: UIScreen.width, height: UIScreen.height + 100)
+            .onAppear(){
+                playBacksound(soundName: data.backsound, soundExtention: data.backsoundExtention)
+                playNaration(soundName: data.objectList[focusedObjectIndex].narationSound, soundExtention: data.objectList[focusedObjectIndex].narationSoundExtention)
+                
+                gameView.loadData(scene: self.scene!, onTap: {
                         hitResults in
-                        handleTap(hitResults: hitResults)
-                    }, view: self.view)
-                }.onReceive(timer) { _ in
-                    updateTime()
-                }
+                    handleTap(hitResults: hitResults)
+                }, view: self.view)
+            }.onReceive(timer) { _ in
+                updateTime()
+            }
         }
     }
 }
 
 struct StoryView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryView(data: StoryData(
+        StoryView(data:  StoryData(
             id: "1",
             title: "Story 1",
             description: "Description 1",
@@ -348,12 +342,12 @@ struct StoryView_Previews: PreviewProvider {
                     narationSound: "narasi01",
                     narationSoundExtention: "mp3",
                     instructionList: [
-                        Instruction(id: "1", text: "", startedAt: 0),
-                        Instruction(id: "2", text: "Halo selamat malam", startedAt: 5),
-                        Instruction(id: "3",text: "Malam ini saya akan membawa anda ke taman terindah di [nama app]", startedAt: 10),
-                        Instruction(id: "4",text: "Tarik Nafas", startedAt: 15),
-                        Instruction(id: "5",text: "Hembuskan", startedAt: 20),
-                        Instruction(id: "6",text: "Apakah kamu sudah rileks? Kita akan berkeliling taman ini dengan santai", startedAt: 25)
+                         Instruction(id: "1", text: "", startedAt: 0),
+                         Instruction(id: "2", text: "Halo selamat malam", startedAt: 5),
+                         Instruction(id: "3",text: "Malam ini saya akan membawa anda ke taman terindah di [nama app]", startedAt: 10),
+                         Instruction(id: "4",text: "Tarik Nafas", startedAt: 15),
+                         Instruction(id: "5",text: "Hembuskan", startedAt: 20),
+                         Instruction(id: "6",text: "Apakah kamu sudah rileks? Kita akan berkeliling taman ini dengan santai", startedAt: 25)
                     ]
                 ),
                 ObjectScene(
