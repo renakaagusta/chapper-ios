@@ -301,6 +301,39 @@ struct StoryView: View {
                         .frame(width: UIScreen.width, height: UIScreen.height)
                 }
                 
+                VStack(alignment: .trailing) {
+                    Spacer().frame(height: UIScreen.height - 150)
+                    HStack {
+                        Spacer().frame(width: UIScreen.width - 100)
+                        if(hintVisibility == false) {
+                            AppCircleButton(
+                                size: 20,
+                                icon: Image(systemName: "lightbulb.fill"),
+                                color: Color.bg.primary,
+                                backgroundColor: Color.foot.primary,
+                                source: AppCircleButtonContentSource.Icon
+                                //onClick:
+                            )
+                            .padding()
+                        }
+                        
+                        if(hintVisibility ==  true) {
+                            AppCircleButton(
+                                size: 20,
+                                icon: Image(systemName: "lightbulb.fill"),
+                                color: Color.bg.primary,
+                                backgroundColor: Color.spot.primary,
+                                source: AppCircleButtonContentSource.Icon
+                                //onClick:
+                            )
+                            .padding()
+                            .shadow(color: Color.spot.primary, radius: 15, x: 0, y: 0)
+                        }
+
+                    }
+
+                }
+                
             }
             .frame(width: UIScreen.width, height: UIScreen.height + 100)
             .onAppear(){
