@@ -281,9 +281,9 @@ struct StoryView: View {
                 }
                 if(hintVisibility) {
                     VStack {
-                        Spacer().frame(height: UIScreen.height - 600)
+                        Spacer().frame(height: UIScreen.height - 200)
                         AppRubik(text: data.objectList[focusedObjectIndex].hint, rubikSize: fontType.body, fontWeight: .bold , fontColor: Color.text.primary)
-                            .padding(100)
+                            
                     }
                     .frame(width:  UIScreen.width, height: UIScreen.height)
                 }
@@ -293,7 +293,8 @@ struct StoryView: View {
                             .padding(.top, 60)
                                 if(dialogVisibility && !endingVisibility) {
                                     dialogView
-                                        .padding(50)
+                                        .padding(.horizontal, 50)
+                                        .padding(.top)
                                 }
                             Spacer()
                         }
