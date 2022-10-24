@@ -150,20 +150,6 @@ struct StoryListView: View {
                            Instruction(id: "7",text: "Mungkin saya dan Kiki akan mampi di mimpumu", startedAt: 30),
                            Instruction(id: "8",text: "Sampai jumpa", startedAt: 35),
                        ]
-                   ),
-                   ObjectScene(
-                       title: "Selamat telah menyelesaikan cerita ini",
-                       description: "Selamat telah menyelesaikan cerita ini",
-                       hint: "Selamat telah menyelesaikan cerita ini",
-                       tag: "BIRD",
-                       type: ObjectType.Ending,
-                       narationDuration: 40,
-                       taskDuration: 30,
-                       tutorialDuration: 20,
-                       narationSound: "narasi01",
-                       narationSoundExtention: "mp3",
-                       instructionList: [
-                       ]
                    )
                ]
            ),

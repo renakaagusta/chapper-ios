@@ -67,6 +67,7 @@
 		B809C9B828FF19A300AB555A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B809C9B728FF19A300AB555A /* Font.swift */; };
 		B809C9CC28FF9D9A00AB555A /* JosefinSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */; };
 		B809C9CE28FFB2F900AB555A /* Rubik.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B809C9CD28FFB2F900AB555A /* Rubik.ttf */; };
+		B819BB64290676F000D8FA69 /* EndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819BB63290676F000D8FA69 /* EndingView.swift */; };
 		B8D96F9C29013EA800682705 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D96F9B29013EA800682705 /* TutorialView.swift */; };
 		B8D96FBF2902FACD00682705 /* narasi01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FBE2902FACD00682705 /* narasi01.mp3 */; };
 		B8D96FC12902FADF00682705 /* sadGusde.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8D96FC02902FADF00682705 /* sadGusde.mp3 */; };
@@ -134,6 +135,7 @@
 		B809C9B728FF19A300AB555A /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JosefinSans.ttf; sourceTree = "<group>"; };
 		B809C9CD28FFB2F900AB555A /* Rubik.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rubik.ttf; sourceTree = "<group>"; };
+		B819BB63290676F000D8FA69 /* EndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingView.swift; sourceTree = "<group>"; };
 		B8D96F9B29013EA800682705 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		B8D96F9E290168BE00682705 /* smallTree.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = smallTree.usdz; sourceTree = "<group>"; };
 		B8D96F9F290168BE00682705 /* simple-trees-collection.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "simple-trees-collection.usdc"; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 		2F3FEB7428FFF2C4003DB990 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B819BB62290676E200D8FA69 /* Ending View */,
 				B8D96F9A29013E9700682705 /* Tutorial */,
 				2F3FEB7F28FFF48F003DB990 /* Story */,
 				2F3FEB7C28FFF417003DB990 /* StorySummary */,
@@ -482,6 +485,14 @@
 				B809C9CB28FF9D9A00AB555A /* JosefinSans.ttf */,
 			);
 			path = "Josefin sans";
+			sourceTree = "<group>";
+		};
+		B819BB62290676E200D8FA69 /* Ending View */ = {
+			isa = PBXGroup;
+			children = (
+				B819BB63290676F000D8FA69 /* EndingView.swift */,
+			);
+			path = "Ending View";
 			sourceTree = "<group>";
 		};
 		B8D96F9A29013E9700682705 /* Tutorial */ = {
@@ -661,6 +672,7 @@
 				2F3FEB3F28FE84CF003DB990 /* Colors.swift in Sources */,
 				2F3FEB5028FE84CF003DB990 /* Loading.swift in Sources */,
 				2F3FEB5328FE84CF003DB990 /* AvatarImage.swift in Sources */,
+				B819BB64290676F000D8FA69 /* EndingView.swift in Sources */,
 				2F3FEB3728FE84CF003DB990 /* Binding.swift in Sources */,
 				2F3FEB7E28FFF42A003DB990 /* StorySummaryView.swift in Sources */,
 				2F3FEB5128FE84CF003DB990 /* TextField.swift in Sources */,

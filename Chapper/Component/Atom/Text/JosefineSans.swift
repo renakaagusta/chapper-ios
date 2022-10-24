@@ -12,6 +12,7 @@ struct AppJosefineSans: View {
     var josepSize: fontType
     var fontWeight: Font.Weight = Font.Weight.medium
     var fontColor: Color = Color.black
+    var textAligment: TextAlignment = .center
     
 
     var body: some View {
@@ -19,6 +20,7 @@ struct AppJosefineSans: View {
             .font(.josefinSans(.regular, size: josepSize))
             .fontWeight(fontWeight)
             .foregroundColor(fontColor)
+            .multilineTextAlignment(textAligment)
     }
 }
 

@@ -14,12 +14,14 @@ struct AppRubik: View {
     var rubikSize: fontType
     var fontWeight: Font.Weight = Font.Weight.medium
     var fontColor: Color = Color.black
+    var textAligment: TextAlignment = .center
     
     var body: some View {
         Text(text)
             .font(.rubik(.regular, size: rubikSize))
             .fontWeight(fontWeight)
             .foregroundColor(fontColor)
+            .multilineTextAlignment(textAligment)
     }
     
 }
