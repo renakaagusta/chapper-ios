@@ -28,7 +28,7 @@ struct StoryView: View {
     
     @State private var narationsProgress: CGFloat = 0
     @State private var state: StoryState = StoryState.Naration
-       
+    
     @State private var gestureVisibility = false
     @State private var gesture = ""
     @State private var endingVisibility: Bool = false
@@ -37,11 +37,11 @@ struct StoryView: View {
     
     @State private var dialogVisibility = false
     @State private var dialogView: AnyView = AnyView(VStack{})
-       
+    
     @State private var focusedObjectIndex = 2
-       
+    
     @State private var elapsedTime: CGFloat = 0
-       let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     init(data: StoryData) {
         self.gameView = GameView()
@@ -59,27 +59,27 @@ struct StoryView: View {
         if(hitResults == nil || state == StoryState.Naration) {
             return
         }
-
+        
         if hitResults!.count > 0 {
             let result = hitResults![0]
             let material = result.node.geometry!.firstMaterial!
             
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.5
-                
+            
             SCNTransaction.completionBlock = {
                 SCNTransaction.begin()
                 SCNTransaction.animationDuration = 0.5
                 
                 material.emission.contents = UIColor.black
-            
+                
                 SCNTransaction.commit()
             }
-                
+            
             material.emission.contents = UIColor.red
-                
+            
             SCNTransaction.commit()
-
+            
             if(result.node.name == data.objectList[focusedObjectIndex].tag) {
                 focusedObjectIndex = focusedObjectIndex + 1
                 state = StoryState.Naration
@@ -100,7 +100,7 @@ struct StoryView: View {
             }
         }
     }
-        
+    
     func showDialog(position: DialogPosition, child: AnyView) {
         self.dialogVisibility = true
         if(position == DialogPosition.Top) {
@@ -115,11 +115,11 @@ struct StoryView: View {
             })
         }
     }
-        
+    
     func hideDialog() {
         self.dialogVisibility = false
     }
-        
+    
     func updateState() {
         if(focusedObjectIndex < data.objectList.count && endingVisibility == false) {
             let narationTime = data.objectList[focusedObjectIndex].narationDuration
@@ -159,10 +159,10 @@ struct StoryView: View {
         
         camera.maximumVerticalAngle = 30
     }
-        
+    
     func updateTime() {
         elapsedTime = elapsedTime + 1
-    
+        
         configCamera()
         
         updateState()
@@ -176,7 +176,7 @@ struct StoryView: View {
         print("OBJECT COUNT")
         print(data.objectList.count)
         print("---------")
-            
+        
         if(focusedObjectIndex <= data.objectList.count - 1) {
             var showedInstruction: String?
             for (index, instruction) in data.objectList[focusedObjectIndex].instructionList!.enumerated() {
@@ -208,7 +208,7 @@ struct StoryView: View {
             if(state != StoryState.Task && showedInstruction != nil) {
                 showDialog(position: DialogPosition.Top, child: AnyView(AppRubik(text: showedInstruction!, rubikSize: fontType.body, fontWeight: .bold , fontColor: Color.text.primary)))
             }
-                
+            
             narationsProgress = elapsedTime / data.objectList[focusedObjectIndex].narationDuration
 
         } else {
@@ -218,16 +218,16 @@ struct StoryView: View {
     
     func getGestureImage(gesture: GestureType) -> String {
         switch(gesture) {
-            case .Zoom:
-                return "hand.zoom"
-            case .SwipeHorizontal:
-                return "hand.swipe.left.right"
-            case .Tap:
-                return "hand.tap"
-            case .None:
-                return "hand.zoom"
-            case .SwipeVertical:
-                return "hand.swip.up.down"
+        case .Zoom:
+            return "hand.zoom"
+        case .SwipeHorizontal:
+            return "hand.swipe.left.right"
+        case .Tap:
+            return "hand.tap"
+        case .None:
+            return "hand.zoom"
+        case .SwipeVertical:
+            return "hand.swip.up.down"
         }
     }
     
@@ -250,7 +250,7 @@ struct StoryView: View {
     }
     
     func playNaration(soundName: String, soundExtention: String) {
-       
+        
         let url = Bundle.main.url(forResource: soundName, withExtension: soundExtention)
         
         guard url != nil else {
@@ -276,8 +276,8 @@ struct StoryView: View {
                 }
                 if(gestureVisibility) {
                     GIFView(type: .name(gesture))
-                          .frame(maxHeight: 100)
-                          .padding()
+                        .frame(maxHeight: 100)
+                        .padding()
                 }
                 if(hintVisibility) {
                     VStack {
@@ -299,6 +299,39 @@ struct StoryView: View {
                             Spacer()
                         }
                         .frame(width: UIScreen.width, height: UIScreen.height)
+                }
+                
+                VStack(alignment: .trailing) {
+                    Spacer().frame(height: UIScreen.height - 150)
+                    HStack {
+                        Spacer().frame(width: UIScreen.width - 100)
+                        if(hintVisibility == false) {
+                            AppCircleButton(
+                                size: 20,
+                                icon: Image(systemName: "lightbulb.fill"),
+                                color: Color.bg.primary,
+                                backgroundColor: Color.foot.primary,
+                                source: AppCircleButtonContentSource.Icon
+                                //onClick:
+                            )
+                            .padding()
+                        }
+                        
+                        if(hintVisibility ==  true) {
+                            AppCircleButton(
+                                size: 20,
+                                icon: Image(systemName: "lightbulb.fill"),
+                                color: Color.bg.primary,
+                                backgroundColor: Color.spot.primary,
+                                source: AppCircleButtonContentSource.Icon
+                                //onClick:
+                            )
+                            .padding()
+                            .shadow(color: Color.spot.primary, radius: 15, x: 0, y: 0)
+                        }
+
+                    }
+
                 }
                 
             }
